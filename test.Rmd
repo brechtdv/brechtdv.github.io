@@ -1,0 +1,11 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+### Introduction
+
+    ```R
+    1+1
+    ````
