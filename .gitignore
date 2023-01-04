@@ -10,8 +10,7 @@ ignore/
 *-Ex.R
 
 # RStudio files
-.Rproj.user/
-*.Rproj
+*.Rproj*
 
 # Windows temp files
 ~$*
