@@ -1,0 +1,23 @@
+# private files
+ignore/
+
+# History files
+.Rhistory
+.Rapp.history
+.RData
+
+# Example code in package build process
+*-Ex.R
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# Windows temp files
+~$*
+
+# PDF version
+signature.pdf
+*.tex
+*.log
+*.synctex.gz
