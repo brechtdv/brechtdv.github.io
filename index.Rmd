@@ -3,6 +3,10 @@ output: bd::html_body
 ---
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+htmltools::includeHTML("index-before.html")
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("vitae-md.R")
 ```
 
@@ -603,3 +607,7 @@ for (i in seq(nrow(db))) {
 ---
 
 _Last update: `r Sys.Date()`_
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+htmltools::includeHTML("index-after.html")
+```
