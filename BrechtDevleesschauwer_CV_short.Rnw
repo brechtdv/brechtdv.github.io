@@ -1,0 +1,119 @@
+\documentclass[
+  a4paper, 12pt, oneside,
+  ]{scrartcl}
+
+%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Sexpr{knitr::knit_child("cv_preamble.tex")}
+
+%\titlespacing*{\section}{0pt}{1ex}{0ex}
+
+\RedeclareSectionCommand[
+  afterindent=false,
+  beforeskip=3pt,
+  afterskip=1pt]{section}
+  
+\pagenumbering{gobble}
+
+\setlength{\headheight}{0pt}
+\enlargethispage{\footskip}
+
+%% R FUNCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Sexpr{source("vitae.R")}
+
+%% START DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+%% HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+{\LARGE \textbf{Brecht Devleesschauwer}}~~{\large PhD DVM MVSc MStat}\\
+\noindent
+\textit{Head of Service Lifestyle and Chronic Diseases}\\
+\textit{Sciensano, Department of Epidemiology and Public Health}\\
+\href{mailto:brecht.devleesschauwer@sciensano.be}{brecht.devleesschauwer@sciensano.be} $\mid$ \href{http://brecht.cbra.be}{brecht.cbra.be}\\
+Rue Juliette Wytsman 14, 1050 Brussels, Belgium $\mid$ +32 2 642 5035
+
+%% PERSONAL STATEMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Personal statement}
+
+The common goal of my research activities is to quantify the true impact of diseases and health inequalities, and to make model-based evaluations of prevention and control. Currently, I am coordinating the Belgian national burden of disease study and chairing the COST Action CA18218 ``European Burden of Disease Network''.
+
+My research activities have led to close to 200 peer-reviewed scientific publications in national and international journals. My scientific expertise in burden assessment, risk assessment and health economics has been recognized through invitations to various national and international expert groups, including the Belgian Superior Health Council, the Belgian Food Safety Authority, and the World Health Organization.
+
+%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+
+\vspace{-0.2cm}
+
+\begin{table}[!htbp]
+\begin{tabular}{ll}
+\textbf{2015} & PhD Veterinary Sciences;  Ghent University, Merelbeke, BE \\
+              & PhD Public Health; Universit\'{e} catholique de Louvain, Brussels, BE \\
+\textbf{2014} & MSc Statistics; Katholieke Universiteit Leuven, Louvain, BE \\
+\textbf{2010} & MSc Veterinary Medicine; Ghent University, Merelbeke, BE \\
+\textbf{2007} & BSc Veterinary Medicine; Ghent University, Merelbeke, BE
+\end{tabular}
+\end{table}
+
+\vspace{-0.7cm}
+
+%% EMPLOYMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Employment}
+
+\vspace{-0.3cm}
+
+\begin{table}[!htbp]
+\begin{tabular}{ll}
+\textbf{2022-} & Head of Service; Sciensano, Brussels, BE \\
+\textbf{2018-} & Visiting professor, risk analysis; UGent, Merelbeke, BE \\
+\textbf{2016-} & Senior epidemiologist; Sciensano, Brussels, BE \\
+\textbf{2018-19} & Visiting professor, advanced epidemiology; UCL, Brussels, BE \\
+\textbf{2016-18} & Visiting professor, health economic evaluations; UCL, Brussels, BE \\
+\textbf{2015-16} & Assistant scientist, global food safety and zoonoses; UF, Gainesville, USA \\
+\textbf{2015} & Post-doctoral researcher; UGent, Merelbeke, BE \\
+\textbf{2013-14} & Consultant; World Health Organization, Geneva, CH \\
+\textbf{2010-15} & Doctoral researcher; UGent, Merelbeke, BE \& UCL, Brussels, BE
+\end{tabular}
+\end{table}
+
+\vspace{-0.4cm}
+
+%% TEACHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Mentoring and supervision}
+
+\noindent
+10 PhD students $\cdot$ 55 MSc students $\cdot$ 8 BSc students
+
+%% PUBLICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Scientific output}
+
+\noindent
+<<echo=FALSE,results='asis',message=FALSE>>=
+db <- read_excel("publications.xlsx", "chapters", na = "NA")
+cat(nrow(db), "book chapters", "$\\cdot$ ")
+
+db <- read_excel("publications.xlsx", "papers", na = "NA")
+cat(nrow(db), "peer-reviewed publications")
+@
+
+<<echo=FALSE, warning=FALSE>>=
+suppressMessages(library(scholar))
+id <- "AFSxtd0AAAAJ"
+gs <- get_profile(id)
+@
+\noindent
+\href{https://scholar.google.be/citations?user=AFSxtd0AAAAJ}{Google Scholar} metrics: \Sexpr{formatC(gs$total_cites, format="f", big.mark=" ", digits=0)} citations $\cdot$ h-index \Sexpr{gs$h_index} $\cdot$ i10-index \Sexpr{gs$i10_index}
+
+\vspace{0.5cm}
+
+\begin{center}
+\hrule
+\vspace{0.5cm}
+\textsl{
+<<echo=FALSE, results='asis'>>=
+month <- month.name[as.numeric(format(Sys.Date(), "%m"))]
+cat(gsub("XXX", month, format(Sys.Date(), "%d XXX %Y")))
+@
+}
+\end{center}
+
+\end{document} 

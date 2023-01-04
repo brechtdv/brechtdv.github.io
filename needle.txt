@@ -1,0 +1,16 @@
+Aeromonas
+Anopheles
+arabiensis
+Echinococcus granulosus
+Fasciola
+Giardia
+Helicobacter pylori
+Opisthorchis
+Plasmodium falciparum
+Salmonella
+Taenia asiatica
+Taenia saginata
+Taenia solium
+Toxocara vitulorum
+Toxoplasma gondii
+Trypanosoma cruzi

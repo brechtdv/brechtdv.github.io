@@ -1,0 +1,636 @@
+\documentclass[
+  a4paper, 12pt, oneside,
+  ]{scrartcl}
+
+%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Sexpr{knitr::knit_child("cv_preamble.tex")}
+
+%% R FUNCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Sexpr{source("vitae.R")}
+
+%% START DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+%% HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+{\LARGE \textbf{Brecht Devleesschauwer}}~~{\large($^\circ$09/09/1986)}
+
+\noindent
+\hrulefill
+
+\vspace{0.1in}
+\noindent
+\textbf{Senior epidemiologist, PhD DVM MVSc MStat}\\
+\textbf{Head of Service Health information}\\
+\textit{Sciensano, Department of Epidemiology and Public Health}\\
+\href{mailto:brecht.devleesschauwer@sciensano.be}{brecht.devleesschauwer@sciensano.be}\\
+Rue Juliette Wytsman 14, 1050 Brussels, Belgium $\mid$ +32 2 642 5035
+
+\noindent
+\hrulefill
+
+%% RESEARCH INTERESTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research interests}
+\begin{itemize}
+  \setlength\itemsep{-0.1em}
+  \item Epidemiology, burden of disease, health impact assessment, risk assessment;
+  \item Bayesian data analysis, true prevalence estimation, disease transmission modeling;
+  \item Zoonotic diseases, food safety, veterinary public health.
+\end{itemize}
+
+%% EMPLOYMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Employment}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Head of Service, Health information}, 01/2023--present \hfill \\
+    Sciensano, Brussels, Belgium
+  \item \textbf{Visiting professor, risk analysis}, 04/2018--present \hfill \\
+    Ghent University, Merelbeke, Belgium
+  \item \textbf{Senior epidemiologist}, 04/2016--present \hfill \\
+    Sciensano, Brussels, Belgium
+  \item \textbf{Head of Service, Lifestyle and chronic diseases}, 02/2022--12/2022 \hfill \\
+    Sciensano, Brussels, Belgium
+  \item \textbf{Visiting professor, advanced epidemiology}, 10/2018--09/2019 \hfill \\
+    Universit\'{e} catholique de Louvain, Brussels, Belgium
+  \item \textbf{Visiting professor, health economic evaluations}, 10/2016--09/2018 \hfill \\
+    Universit\'{e} catholique de Louvain, Brussels, Belgium
+  \item \textbf{Assistant scientist, global food safety and zoonoses}, 06/2015--03/2016 \hfill \\
+    University of Florida, Gainesville, USA% \hfill \\
+    %Activities: 90\% research, 10\% teaching
+  \item \textbf{Post-doctoral researcher}, 04/2015 \hfill \\
+    Ghent University, Merelbeke, Belgium
+  \item \textbf{Contracted technical expert}, 09/2013--12/2013, 02/2014--03/2014 \hfill \\
+    World Health Organization, Geneva, Switzerland
+  \item \textbf{Doctoral researcher}, 10/2010--03/2015 \hfill \\
+     Ghent University, Merelbeke, Belgium \hfill \\
+     Universit\'{e} catholique de Louvain, Brussels, Belgium
+\end{itemize}
+
+%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\subsection{Academic titles}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Ph.D. Veterinary Sciences \& Ph.D. Public Health}, 2010--2015 \hfill \\
+    Ghent University, Merelbeke, Belgium \hfill \\
+    Universit\'{e} catholique de Louvain, Brussels, Belgium \hfill \\
+    Dissertation topic: ``\textit{The Burden of Zoonoses in Nepal}'' \hfill \\
+    Promoters: Prof. Dr. P. Dorny, Prof. Dr. N. Speybroeck, Prof. Dr. L. Duchateau
+
+  \item \textbf{Doctoral Training Programme}, 2010--2015 \hfill \\
+    Doctoral School of Life Sciences and Medicine, Ghent University, Belgium
+
+  \item \textbf{M.Sc. Statistics (biometrics)}, 2011--2014 \hfill \\
+    Katholieke Universiteit Leuven, Louvain, Belgium; Great distinction \hfill \\
+    Dissertation topic: ``\textit{Quantitative Microbial Risk Assessment with R}''\hfill \\
+    Promoters: Prof. Dr. G. Molenberghs, Prof. Dr. C. Faes
+
+  \item \textbf{M.Sc. Veterinary Medicine (research \& industry)}, 2007--2010 \hfill \\
+    Ghent University, Merelbeke, Belgium; Greatest distinction \hfill \\
+    Dissertation topic: ``\textit{The Epidemiology of \textrm{Taenia solium} in Nepal}'' \hfill \\
+    Promoter: Prof. Dr. P. Dorny
+
+  \item \textbf{B.Sc. Veterinary Medicine}, 2004--2007 \hfill \\
+    Ghent University, Merelbeke, Belgium; Greatest distinction
+\end{itemize}
+
+%% SHORT COURSES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Short courses}
+\begin{itemize}
+  \setlength\itemsep{0em}
+<<echo=FALSE, results='asis', message=FALSE>>=
+db <- read_excel("short_courses.xlsx", "index")
+db <- db[order(db$title), ]
+db <- db[order(db$year, decreasing = TRUE), ]
+
+for (i in seq(nrow(db))) {
+  cat("\\item \\textbf{", db$title[i], "}, ",
+      sanitize_specials(db$location[i], "latex"), ", ",
+      db$year[i], "\n", sep = "")
+}
+@
+\end{itemize}
+
+%% PROFESSIONAL EXPERIENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional experiences}
+\subsection{Contributions to peer review}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Guest Editor}, 2019--present\hfill \\
+    Archives of Public Health: burden of disease article collection
+  %\item \textbf{Academic Editor}, 2017--present\hfill \\
+  %  Food and Waterborne Parasitology
+  \item \textbf{Academic Editor}, 2017--2022\hfill \\
+    PLOS ONE
+  \item \textbf{Associate Editor}, 2017--2019\hfill \\
+    BMC Veterinary Research, Parasitology section
+  \item \textbf{Reviewer for international scientific journals}, e.g.:\hfill \\
+<<echo=FALSE, results='asis'>>=
+journals <-
+  read.table("journals.txt", stringsAsFactors = FALSE, sep = "\t")$V1
+cat(sanitize_specials(paste(sort(journals), collapse = ", "), "latex"))
+@
+\end{itemize}
+
+\subsection{Participation in national projects}
+\begin{itemize}
+  \item \textbf{HELICON – Unravelling the long-term and indirect health impact of the coronavirus crisis in Belgium}, 2020--2025 \hfill \\
+  \emph{HELICON is a BELSPO BRAIN-be project that aims to unravel the social inequalities and the long-term and indirect health effects of the COVID-19 crisis in Belgium.}
+  
+    \item \textbf{AHEAD – Towards the development of a national health data platform}, 2020--2023 \hfill \\
+  \emph{AHEAD is a BELSPO BRAIN-be project that aims to increase the visibility of the Belgian health information landscape, and explore the technical, ethical and legal bottlenecks towards a more integrated national health information system.}
+  
+  \item \textbf{ELLIS – Monitoring and mitigating environmental health inequalities in Belgium}, 2019--2023 \hfill \\
+  \emph{ELLIS is a BELSPO BRAIN-be project that aims to develop policy-relevant tools to monitor and mitigate environmental health inequalities in Belgium.}
+  
+  \item \textbf{WaIST – Contribution of excessive weight status to the social impact of non-communicable diseases, multimorbidity and disability in Belgium: past, present, and future}, 2019--2023 \hfill \\
+  \emph{Proactive policy support for the further development and implementation of evidence-based health policies for the prevention of excessive weight gain.}
+
+  \item \textbf{Diagnosis-based morbidity statistics -- Pilot data collection}, 2018--2019 \hfill \\
+  \emph{The overall objective of this Eurostat-funded project is to obtain nationally representative, comparable diagnosis-based morbidity data proceeding from the 2018 Shortlist of Morbidity Indicators developed by Eurostat.}
+
+  \item \textbf{Belgian Health Status Report}, 2017--present \hfill \\
+  \emph{The Belgian Health Status Report addresses the lack of an integrated view on the health status of the Belgian population. It provides health status information relevant for decision-makers, with focus on information useful for defining and/or evaluating health objectives.}
+
+  \item \textbf{Belgian National Burden of Disease Study}, 2016--present \hfill \\
+  \emph{The Belgian National Burden of Disease Study (BeBOD) aims to establish a coherent framework for routinely quantifying the burden of disease in Belgium using the DALY metric. The project supports capacity building, ensuring ownership and sustainability.}
+
+  \item \textbf{Belgian contribution to the WHO/EURO Health for All Database}, 2016--present \hfill \\
+  \emph{The HFA database is one of WHO's oldest sources of data. The indicators cover basic demographics, health status, health determinants and risk factors, as well as health care resources, expenditures and more. Each year, Belgium is requested to update the information in the HFA database.}
+
+  \item \textbf{Belgian Health System Performance Assessment}, 2016--2019 \hfill \\
+  \emph{The HSPA project is a collaboration between Sciensano, KCE, RIZIV-INAMI and FPS Public Health. The report highlights strenghts and weaknesses of the Belgian health system, through a dashboard of 121 indicators, divided over 5 transversal dimensions and 5 specific themes.}
+
+\end{itemize}
+
+
+\subsection{Participation in international projects}
+\begin{itemize}
+  \item \textbf{Computational Task Force member}, 2021--2025\hfill \\
+    \textbf{Impact Measurement Task Force member}, 2021--2025\hfill \\
+    Foodborne Disease Burden Epidemiology Reference Group, WHO
+    
+  \item \textbf{WP Member}, 2021--present \hfill \\
+    WP4 Data analysis, Unravelling Data for Rapid Evidence-Based Response to COVID-19---\href{https://www.uncover-eu.net}{www.uncover-eu.net}
+    
+  \item \textbf{WP member}, 2021--present \hfill \\
+    WP5 Research methodologies to assess the impact of COVID-19, The Population Health Information Research Infrastructure---\href{https://www.phiri.eu}{www.phiri.eu}
+    
+  \item \textbf{Human Health Theme co-lead}, 2021--present \hfill \\
+    Global Burden of Animal Diseases programme---\href{https://www.animalhealthmetrics.org}{www.animalhealthmetrics.org}
+        
+  \item \textbf{Main Action Proposer and Chair}, 2019--present \hfill \\
+    COST Action CA18218 ``European Burden of Disease Network''---\href{https://www.burden-eu.net}{www.burden-eu.net}
+    
+  \item \textbf{Country representative}, 2017--present \hfill \\
+    EUROSTAT Technical Group on Morbidity Statistics
+    
+  \item \textbf{Country representative}, 2016--present \hfill \\
+    European Burden of Disease Network (WHO/EURO, IHME)
+    
+  \item \textbf{Epidemiology workgroup leader}, 2013--2018 \hfill \\
+    COST Action TD1302 CYSTINET---\href{http://www.cystinet.org}{www.cystinet.org}
+    
+    \item \textbf{Risk forecasting workgroup vice-leader}, 2015--2016 \hfill \\
+    COST Action FA1408 EURO-FBP
+    
+  \item \textbf{Computational Task Force member}, 2011--2015\hfill \\
+    \textbf{Country Studies Task Force member}, 2011--2015\hfill \\
+    Foodborne Disease Burden Epidemiology Reference Group, WHO
+\end{itemize}
+
+\subsection{Participation in international development projects}
+\begin{itemize}
+  \item \textbf{USAID Feed the Future Innovation Lab on Livestock Systems}, 2015--2016\hfill \\
+    \emph{Project granted to UF, aiming to improve livestock systems in Mali, Burkina Faso, Ethiopia, Rwanda, Nepal and Cambodia}
+    \begin{itemize}
+    \setlength\itemsep{-0.1em}
+      \item Contribution to project proposal
+      \item Participation in ``Livestock Disease Management and Food Safety'' AOI
+    \end{itemize}
+    
+  \item \textbf{VLIR-UOS Institutional University Cooperation with Jimma University, Ethiopia}, 2012--2015\hfill \\
+    \emph{Collaboration between Jimma University and different Flemish universities to strenghten institutional capacity}
+    \begin{itemize}
+    \setlength\itemsep{-0.1em}
+      \item Organisation of a workshop on design of experiments
+      \item Supervision of Master students
+    \end{itemize}
+    
+  \item \textbf{Doctoral research in Nepal}, 2010--2015\hfill \\
+    \emph{Collection and analysis of data on the burden of zoonotic and foodborne diseases, during a 6 months' stay}
+    
+  \item \textbf{Impact assessment and control of cysticercosis in the Indian Subcontinent}, 2007--2009\hfill \\
+    \emph{VLIR-UOS collaboration between Institute of Tropical Medicine (Antwerp, Belgium) and National Zoonoses and Food Hygiene Research Centre (Kathmandu, Nepal)}
+    \begin{itemize}
+    \setlength\itemsep{-0.1em}
+      \item Field work, lab work, data analysis
+    \end{itemize}
+\end{itemize}
+
+\subsection{Contributions as invited expert}
+\begin{itemize}
+  \item EFSA working group on foodborne parasites. European Food Safety Authority, Parma, Italy; 2017--2018.
+  \item Steering committee of KCE project 292, Exploratory steps for the formulation of Belgian health system targets. Belgian Health Care Knowledge Centre, Brussels, Belgium; 2017.
+  \item FAO/WHO expert meeting on verotoxigenic \emph{Escherichia coli} (VTEC) / Shigatoxigenic \emph{E. coli} (STEC). World Health Organization, Geneva, Switzerland; 2016--2017.
+  \item Expert consultation on diet-related health problems to support the development of food-based dietary guidelines. Superior Health Council, Brussels, Belgium; 2016--2017.
+  \item Expert panel on FDA-iRisk DALY templates. Research Triangle International, NC, USA; 2016.
+  \item Expert consultation to discuss preliminary results of the joint WHO/IHME analysis of causes of death among children aged 5--14 years in the WHO European Region. WHO Regional Office for Europe, Copenhagen, Denmark; 2015.
+  \item Trend analysis applied to parameter/matrix combinations from the the control plan. Federal Agency for the Safety of the Food Chain, Brussels, Belgium; 2014.
+  \item FAO/WHO expert meeting on risk-based examples for control of \emph{Trichinella} spp. and \emph{Taenia saginata} in meat. World Health Organization, Geneva, Switzerland; 2013--2014.
+\end{itemize}
+
+\subsection{Institutional responsibilities}
+\begin{itemize}
+  \item \textbf{Coordinator}, 2021--present\hfill \\
+    Sciensano R Introduction Course
+  \item \textbf{Founder}, 2018--present\hfill \\
+    Sciensano R User Group
+  \item \textbf{Member}, 2017--present\hfill \\
+    Sciensano Redactional Council
+  \item \textbf{Project leader}, 2017--2019\hfill \\
+    Sciesano Translational Research Working Group
+\end{itemize}
+
+%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\subsection{Languages}
+\begin{itemize}
+  \setlength\itemsep{-0.1em}
+  \item
+    \begin{tabular}{@{}p{0.8in}p{1in}p{1in}p{1in}}
+    \textbf{Dutch}   & speaking$+++$ & reading$+++$ & writing$+++$ \\
+    \end{tabular}
+  \item
+    \begin{tabular}{@{}p{0.8in}p{1in}p{1in}p{1in}}
+    \textbf{English} & speaking$+++$ & reading$+++$ & writing$+++$ \\
+    \end{tabular}
+  \item
+    \begin{tabular}{@{}p{0.8in}p{1in}p{1in}p{1in}}
+    \textbf{French}  & speaking$+++$  & reading$+++$ & writing$++$ \\
+    \end{tabular}
+  \item
+    \begin{tabular}{@{}p{0.8in}p{1in}p{1in}p{1in}}
+    \textbf{German}  & speaking$+$   & reading$++$  & writing$+$ \\
+    \end{tabular}
+  \item
+    \begin{tabular}{@{}p{0.8in}p{1in}p{1in}p{1in}}
+    \textbf{Nepali}  & speaking$+$   & reading$+$   & writing$+$ \\
+    \end{tabular}
+\end{itemize}
+
+\subsection{Computer skills}
+\begin{itemize}
+  \setlength\itemsep{-0.1em}
+  \item \textbf{Statistical software}: R, JAGS, WinBUGS, OpenBUGS, SAS, Stata
+  \item \textbf{Advanced R skills}: package development, Tcl/Tk interfaces, Shiny applications
+  \item \textbf{Design and programming}: html, javascript, php, mysql, \LaTeX, markdown, C++
+  \item \textbf{Windows and MS Office}: Word, Excel, Powerpoint, Access
+\end{itemize}
+
+%% TEACHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching}
+
+\subsection{Courses}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Advanced epidemiology} \hfill \\
+    WFSP2238, Universit\'{e} catholique de Louvain, 2018--2019
+  \item \textbf{Health economic evaluations} \hfill \\
+    WFSP2103, Universit\'{e} catholique de Louvain, 2016--2018
+  \item \textbf{Quantitative microbial risk assessment of pathogens in food systems} \hfill \\
+    ANS 6932 / FOS 6936, University of Florida, February 26--March 4, 2016
+\end{itemize}
+
+\subsection{Workshops}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{R Introduction Course, 2nd edition}, 11--25 October 2021 \hfill \\
+    Sciensano, Brussels, Belgium
+    \item \textbf{General Concepts of Burden of Disease}, 28 May--11 June 2021 \hfill \\
+    European Burden of Disease Network---\href{https://www.burden-eu.net/training}{www.burden-eu.net/training}
+  \item \textbf{R Introduction Course, 1st edition}, 19--30 April 2021 \hfill \\
+    Sciensano, Brussels, Belgium
+  \item \textbf{Burden of Disease and the DALY metric, 2nd edition}, 11--12 October 2017 \hfill \\
+    WIV-ISP, Brussels, Belgium
+  \item \textbf{Burden of Disease and the DALY metric, 1st edition}, 5--6 October 2016 \hfill \\
+    WIV-ISP, Brussels, Belgium
+  \item \textbf{CYSTINET Epidemiology Training School}, 1--3 September 2014 \hfill \\
+    Institute of Tropical Medicine, Antwerp, Belgium \hfill \\
+    Contents: introduction to R, systematic review and meta-analysis, GIS
+  \item \textbf{National Workshop on Design of Experiments
+for Statisticians and Practitioners}, 28--29 March 2013 \hfill \\
+    Jimma University, Jimma, Ethiopia \hfill \\
+    Partims: introduction to R, analysis of variance
+\end{itemize}
+
+\subsection{Lectures}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Topics in tropical veterinary medicine}, 2013--2016 \hfill \\
+    MSc Veterinary Medicine, Ghent University
+  \item \textbf{Food safety: an introduction}, 2015 \hfill \\
+    Environmental Health Concepts in Public Health, PHC 6313, University of Florida
+  \item \textbf{Concepts of health economics}, 2013--2014 \hfill \\
+    MSc Public Health, Universit\'{e} catholique de Louvain
+  \item \textbf{Burden of disease and the Disability-Adjusted Life Year}, 2013--2015 \hfill \\
+    MSc Public Health, Universit\'{e} catholique de Louvain \hfill \\
+    MSc Health and Development, Universit\'{e} catholique de Louvain \hfill \\
+    MSc Occupational Medicine, Universit\'{e} catholique de Louvain \hfill \\
+    BSc Biomedical Sciences, Universit\'{e} catholique de Louvain
+  \item \textbf{Diagnostic test characteristics and true prevalence}, 2013--2014 \hfill \\
+    MSc Public Health, Universit\'{e} catholique de Louvain \hfill \\
+    MSc Health and Development, Universit\'{e} catholique de Louvain
+\end{itemize}
+
+\subsection{Practicals}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Biomedical statistics}, 2012--2014 \hfill \\
+    BSc Veterinary Medicine, Ghent University
+    \item \textbf{Applied biomedical statistics}, 2013--2014 \hfill \\
+    MSc Veterinary Medicine, Ghent University
+\end{itemize}
+
+\subsection{PhD students (6)}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item \textbf{Martina Otavova}, 2020--2024 \hfill \\
+    PhD Social Sciences (demography), Université catholique de Louvain \hfill \\
+    Development and application of a Belgian Index of Multiple Deprivation \hfill \\
+    Promoters: Bruno Masquelier, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Vanessa Gorasso}, 2020--2024 \hfill \\
+    PhD Public Health, Ghent University \hfill \\
+    Health impact assesssment of excess weight status prevention policies \hfill \\
+    Promoters: Delphine De Smedt, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Margot Cooreman-Algoed}, 2018--2024 \hfill \\
+    PhD Bioscience Engineering, Ghent University \hfill \\
+    Integrating environmental and nutritional aspects of diets \hfill \\
+    Promoters: Jo Dewulf, Carl Lachat, \textbf{Brecht Devleesschauwer}  
+  \item \textbf{Lisa Van Wilder}, 2018--2022 \hfill \\
+    PhD Public Health, Ghent University \hfill \\
+    Quality of life in patients with chronic disease \hfill \\
+    Promoters: Delphine De Smedt; Els Clays, \textbf{Brecht Devleesschauwer}
+  \item \textbf{Frederik Engelen}, 2018--2021 \hfill \\
+    PhD Veterinary Sciences, Ghent University \hfill \\
+    Shiga toxin-producing Escherichia coli: A dangerous gut feeling \hfill \\
+    Promoters: Eric Cox, Lieven De Zutter, Jacques Mainil, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Sofie Theresa Thomsen}, 2016--2019 \hfill \\
+    PhD Nutrition, National Food Institute, Danish Technical University \hfill \\
+    Risk-benefit assessment of food substitutions \hfill \\
+    Promoters: Rikke Andersen; Sara Monteiro Pires, Morten Poulsen, \textbf{Brecht Devleesschauwer}  
+\end{itemize}
+
+<<echo=FALSE,results='asis',message=FALSE>>=
+db <- read_excel("students.xlsx", "students")
+
+db$univ <- sanitize_specials(db$univ, "latex")
+db$title <- sanitize_specials(db$title, "latex")
+
+db_msc <- db[db$grade == "MSc", ]
+db_msc <- db_msc[order(db_msc$year, decreasing = TRUE), ]
+
+cat("\\subsection{MSc students (", nrow(db_msc), ")}\n", sep = "")
+
+cat("\\emph{Past 5 years shown only --- for a complete list, please visit \\url{https://brecht.cbra.be}}")
+
+db_msc <- subset(db_msc, year >= as.numeric(format(Sys.Date(), "%Y"))-5)
+
+cat("\\begin{itemize}\n")
+cat("\\setlength\\itemsep{0em}\n")
+for (i in seq(nrow(db_msc)))
+  print_student(db_msc[i, ], nrow(db_msc) - i + 1)
+cat("\\end{itemize}\n")
+
+#db_bsc <- db[db$grade == "BSc", ]
+#db_bsc <- db_bsc[order(db_bsc$year, decreasing = TRUE), ]
+
+#cat("\\subsection{BSc students (", nrow(db_bsc), ")}\n", sep = "")
+
+#cat("\\begin{itemize}\n")
+#cat("\\setlength\\itemsep{0em}\n")
+#for (i in seq(nrow(db_bsc)))
+#  print_student(db_bsc[i, ], nrow(db_bsc) - i + 1)
+#cat("\\end{itemize}\n")
+@
+
+%\subsection{Short-term scientific missions (4)}
+%\begin{itemize}
+%  \setlength\itemsep{0em}
+%  \item \textbf{Fabian Dupont}, October 2015 \hfill \\
+%    MSc Medicine, Technische Universit\"{a}t M\"{u}nchen \hfill \\
+%    Health and economic impact of \emph{Taenia solium} neurocysticercosis in Uganda
+%  \item \textbf{Uffe Christian Braae}, December 2014 \hfill \\
+%    PhD Veterinary Medicine, University of Copenhagen \hfill \\
+%    Development of a \emph{Taenia solium} transmission model
+%  \item \textbf{Hardy Richter}, September 2014 \hfill \\
+%    Research associate, Munich Global Neurology Group \hfill \\
+%    Landscape analysis of \emph{Taenia solium} neurocysticercosis in Europe
+%  \item \textbf{Chiara Trevisan}, July 2014 \hfill \\
+%    PhD Veterinary Medicine, University of Copenhagen \hfill \\
+%    Burden assessment of \emph{Taenia solium} cysticercosis in Tanzania
+%\end{itemize}
+
+\subsection{PhD examination committees (6)}
+\begin{itemize}
+  \setlength\itemsep{0em}
+
+  \item \textbf{Nadine Kayiba Kalendan}, October 2021 \hfill \\
+    PhD Public Health, Université catholique de Louvain \hfill \\
+    Mise en place d’un système de surveillance moléculaire de la résistance aux antipaludiques en République Démocratique du Congo : Rôle, avantage et défis \hfill \\
+    Promoters: Niko Speybroeck, Paul Lusamba Dikassa
+
+  \item \textbf{Nanna Weye}, August 2021 \hfill \\
+    PhD Health, Aarhus University \hfill \\
+    The burden of disease of mental and substance use disorders \hfill \\
+    Promoters: John McGrath, Oleguer Plana-Ripoll, Kim Moesgaard Iburg, Harvey Whiteford
+
+  \item \textbf{Lea Sletting Jakobsen}, November 2017 \hfill \\
+    PhD Nutrition, National Food Institute, Danish Technical University \hfill \\
+    Method development in the study of burden of disease of foodborne chemicals \hfill \\
+    Promoters: Morten Poulsen; Sara Monteiro Pires, Maarten Nauta
+
+  \item \textbf{Malgorzata Jennes}, October 2017 \hfill \\
+    PhD Veterinary Sciences, Ghent University \hfill \\
+    Novel insights in the host-pathogen interaction of porcine toxoplasmosis \hfill \\
+    Promoters: Eric Cox; Pierre Dorny, St\'{e}phane De Craeye
+
+  \item \textbf{Elvire Mfueni Bikundi}, June 2016 \hfill \\
+    PhD Public Health, Universit\'{e} catholique de Louvain \hfill \\
+    Mieux comprendre les relations entre les d\'{e}terminants socio\'{e}conomiques, la couverture en moustiquaires et la pr\'{e}valence du paludisme chez les enfants en R.D Congo et en Afrique \hfill \\
+    Promoters: Niko Speybroeck; Robert Snow
+
+  \item \textbf{Marco Coral Almeida}, February 2016 \hfill \\
+    PhD Veterinary Sciences, Ghent University \hfill \\
+    Epidemiological transmission patterns of \emph{Taenia solium} cysticercosis in endemic areas: The case of Ecuador \hfill \\
+    Promoters: Pierre Dorny; Sarah Gabri\"{e}l, Emmanuel Nji Abatih, Washington Benitez
+\end{itemize}
+
+%% PUBLICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scientific output}
+
+\subsection{Book chapters}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+<<echo=FALSE,results='asis',message=FALSE>>=
+db <- read_excel("publications.xlsx", "chapters", na = "NA")
+
+db <- db[order(db$title), ]
+db <- db[order(db$date, decreasing = TRUE), ]
+for (i in seq(nrow(db))) print_chapter(db[i, ], nrow(db) - i + 1)
+@
+\end{itemize}
+
+\subsection{Peer-reviewed papers}
+<<echo=FALSE, warning=FALSE, message=FALSE>>=
+library(scholar)
+id <- "AFSxtd0AAAAJ"
+gs <- get_profile(id)
+@
+\textbf{Google Scholar metrics: \Sexpr{formatC(gs$total_cites, format = "fg", big.mark = " ")} citations $\cdot$ h-index \Sexpr{gs$h_index} $\cdot$ i10-index \Sexpr{gs$i10_index}}
+%\textbf{Google Scholar metrics: 162 citations $\cdot$ h-index 8 $\cdot$ i10-index 5}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+<<echo=FALSE,results='asis',message=FALSE>>=
+db <- read_excel("publications.xlsx", "papers", na = "NA")
+class(db) <- "data.frame"
+db <- db[order(db$title), ]
+db <- db[order(db$date, decreasing = TRUE), ]
+db <- db[order(!is.na(db$volume)), ]
+for (i in seq(nrow(db))) print_article(db[i, ], nrow(db) - i + 1)
+@
+\end{itemize}
+
+%% SUBMITTED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Submitted manuscripts}
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+<<echo=FALSE, results='asis', message=FALSE>>=
+db <- read_excel("publications.xlsx", "submitted", na = "NA")
+class(db) <- "data.frame"
+db <- db[order(db$title), ]
+db <- db[order(db$date, decreasing = TRUE), ]
+for (i in seq(nrow(db))) print_article(db[i, ], nrow(db) - i + 1)
+@
+\end{itemize}
+
+%% TALKS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Oral and poster presentations}
+I have presented my work at numerous national and international conferences and meetings.
+%\begin{itemize}
+%  \setlength\itemsep{0em}
+<<echo=FALSE, results='asis', message=FALSE,include=FALSE>>=
+db <- read_excel("presentations.xlsx", "oral", na = "NA")
+class(db) <- "data.frame"
+db <- db[order(db$title), ]
+db <- db[order(db$month, decreasing = TRUE), ]
+db <- db[order(db$year, decreasing = TRUE), ]
+for (i in seq(nrow(db))) {
+  print_proceeding(db[i, ], nrow(db) - i + 1)
+}
+@
+%\end{itemize}
+
+%\subsection{Poster presentations}
+%\begin{itemize}
+%  \setlength\itemsep{0em}
+<<echo=FALSE,results='asis',message=FALSE,include=FALSE>>=
+db <- read_excel("presentations.xlsx", "poster", na = "NA")
+class(db) <- "data.frame"
+db <- db[order(db$title), ]
+db <- db[order(db$month, decreasing = TRUE), ]
+db <- db[order(db$year, decreasing = TRUE), ]
+for (i in seq(nrow(db))) {
+  print_proceeding(db[i, ], nrow(db) - i + 1)
+}
+@
+%\end{itemize}
+
+\subsection{Reports}
+\begin{itemize}
+  \setlength\itemsep{0em}
+    \item[{[19]}] Maertens de Noordhout C, Detollenaere J, Primus-de Jong C, Kohn L, \textbf{Devleesschauwer B}, Charafeddine R, Cleemput I. Identifying Patient needs: methodological approach and application. Health Services Research (HSR) Brussels: Belgian Health Care Knowledge Centre (KCE). 2021. KCE Reports 348. D/2021/10.273/51.. \url{https://kce.fgov.be/en/identifying-patient-needs-methodological-approach-and-application}
+  \item[{[18]}] Cornez A, Gorasso V, \textbf{Devleesschauwer B} (2021) Belgian national burden of disease study. Guidelines for the calculation of DALYs in Belgium. Brussels, Belgium: Sciensano; 225pp. \url{https://www.sciensano.be/nl/biblio/belgian-national-burden-disease-study-guidelines-calculation-dalys-belgium-0}
+  \item[{[17]}] Schutte N, Van der Heyden J, \textbf{Devleesschauwer B}, De Ridder K, Van Oyen H (2020) BELCOHORT: Opportunities for a population-based cohort in Belgium. Brussels, Belgium: Sciensano; 58pp. Report number: D/2020/14.440/84. \url{https://www.sciensano.be/en/biblio/belcohort-opportunities-a-population-based-cohort-belgium}
+  \item[{[16]}] Cornez A, \textbf{Devleesschauwer B} (2020) Belgian national burden of disease study. Guidelines for the calculation of DALYs in Belgium. Brussels, Belgium: Sciensano; 94pp. \url{https://www.sciensano.be/nl/biblio/belgian-national-burden-disease-study-guidelines-calculation-dalys-belgium}
+  \item[{[15]}] Schutte N, Raes L, \textbf{Devleesschauwer B} (2020) Morbidity Statistics. 2019 Pilot Data Collection Belgium, Final Report. Brussels, Belgium: Sciensano; 52pp. Report number: D/2020/14.440/86. \url{https://www.sciensano.be/en/biblio/morbidity-statistics-2019-pilot-data-collection-belgium-final-report}
+  \item[{[14]}] Raes L, \textbf{Devleesschauwer B} (2019) Morbidity Statistics. 2019 Pilot Data Collection Belgium, Intermediary Report. Brussels, Belgium: Sciensano; 50pp. \url{https://www.sciensano.be/en/biblio/morbidity-statistics-2019-pilot-data-collection-belgium-intermediary-report}
+  \item[{[13]}] Food and Agriculture Organization of the United Nations, World Health Organization (2019) Attributing illness caused by Shiga toxin-producing \emph{Escherichia coli} (STEC) to specific foods. JEMRA Microbiological Risk Assessment Series. \url{http://www.fao.org/publications/card/en/c/CA5758EN}
+  \item[{[12]}] Devos C, Cordon A, Lef\`{e}vre M, Obyn C, Renard F, Bouckaert N, Gerkens S, Maertens de Noordhout C, \textbf{Devleesschauwer B}, Haelterman M, L\'{e}onard C, Meeus P. Performance of the Belgian health system -- report 2019. Health Services Research (HSR) Brussels: Belgian Health Care Knowledge Centre (KCE). 2019. KCE Reports 313. D/2019/10.273/34. \url{https://kce.fgov.be/en/performance-of-the-belgian-health-system-%E2%80%93-report-2019}
+  \item[{[11]}] Renard F, \textbf{Devleesschauwer B} (2019) Health Status Report 2019: De gezondheidstoestand in Belgi\"{e}. Brussels, Belgium: Sciensano; 48pp. Report number D/2019/14.440/4. \url{https://doi.org/10.25608/reh4-ty02}
+  \item[{[10]}] Renard F, \textbf{Devleesschauwer B} (2019) Health Status Report 2019: L'\'{e}tat de sant\'{e} en Belgique. Brussels, Belgium: Sciensano; 48pp. Report number D/2019/14.440/3. \url{https://doi.org/10.25608/a42z-ah78}
+  \item[{[9]}] Federal Agency for the Safety of the Food Chain (2019) The FASFC analyses program regarding process contaminants (dossier SciCom 2018/03). \url{http://www.afsca.be/scientificcommittee/opinions/2019/_documents/Advice02-2019.pdf}
+  \item[{[8]}] Federal Agency for the Safety of the Food Chain (2018) The analysis program regarding microbiological analyses in prepared products, fish products, vegetables, fruit, herbs, vegetable oil, fertilizers, beverages and water not intended for drinks (dossier SciCom 2017/24). \url{http://www.afsca.be/scientificcommittee/opinions/2018/_documents/Advice15-2018.pdf}
+  \item[{[7]}] Food and Agriculture Organization of the United Nations, World Health Organization (2018) Shiga toxin-producing \emph{Escherichia coli} (STEC) and food: attribution, characterization, and monitoring. JEMRA Microbiological Risk Assessment Series. \url{http://www.fao.org/documents/card/en/c/CA0032EN}
+  \item[{[6]}] Graham H, Martijn Bouwknegt M, \textbf{Devleesschauwer B}, Robertson L, van der Giessen L (2016) COST Action FA1408: European ranking of foodborne parasites. Results of a workshop held to prioritise foodborne parasites in Europe using multicriteria decision analyses, 8--12 February 2016, RIVM Bilthoven.
+  \item[{[5]}] World Health Organization (2015) WHO estimates of the global burden of foodborne diseases. Foodborne diseases burden epidemiology reference group 2007-2015. Geneva: WHO Press. \url{http://www.who.int/foodsafety/publications/foodborne_disease/fergreport/en/}
+  \item[{[4]}] Smit S, \textbf{Devleesschauwer B}, Apers L, Macq J, Beutels P, Speybroeck N (2015) Evaluation of the cost-effectiveness of the tuberculosis policies in Flanders. Report submitted to the Agency for Care and Health.
+  \item[{[3]}] Food and Agriculture Organization of the United Nations, World Health Organization (2014) Risk based examples for control of \emph{Trichinella} spp. and \emph{Taenia saginata} in meat. Report of a joint FAO/WHO expert meeting, 22--25 October 2013, WHO Headquarters, Geneva, Switzerland. \url{ftp://ftp.fao.org/codex/meetings/CCFH/ccfh46/Trichinella Mtg Report 241014.pdf}
+  \item[{[2]}] World Health Organization (2014) WHO initiative to estimate the global burden of foodborne diseases: fifth formal meeting of the Foodborne Disease Burden Epidemiology Reference Group (FERG), 8--12 April 2013, Geneva, Switzerland. Geneva: WHO Press. \url{http://www.who.int/foodsafety/publications/ferg5/en/}
+  \item[{[1]}] World Health Organization (2014) WHO initiative to estimate the global burden of foodborne diseases: fourth formal meeting of the Foodborne Disease Burden Epidemiology Reference Group (FERG): Sharing New Results, Making Future Plans, and Preparing Ground for the Countries. Geneva: WHO Press. \url{http://www.who.int/foodsafety/publications/ferg4/en/}
+\end{itemize}
+
+\subsection{R Packages}
+\begin{itemize}
+  \setlength\itemsep{0em}
+<<echo=FALSE,results='asis',message=FALSE>>=
+db <- read_excel("Rpackages.xlsx", "tab")
+db <- db[order(db$date, decreasing = TRUE), ]
+for (i in seq(nrow(db))) {
+  print_package(db[i, ], nrow(db) - i + 1)
+}
+@
+\end{itemize}
+
+\subsection{Vulgarizing articles}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item[{[9]}] \textit{Hoe overgewicht op de gezondheidszorg weegt.} EOS Blogs, 2 December 2021. \url{https://www.eoswetenschap.eu/gezondheid/hoe-overgewicht-op-de-gezondheidszorg-weegt}
+  \item[{[8]}] \textit{In a tobacco-free world, life expectancy increases by 2 years.} Sciensano news, 11 December 2019. \url{https://www.sciensano.be/en/press-corner/a-tobacco-free-world-life-expectancy-increases-2-years}
+  \item[{[7]}] \textit{Acute gastroenteritis cost the Belgian economy hundreds of millions euros every year.} Sciensano news, 26 June 2019. \url{https://www.sciensano.be/en/press-corner/acute-gastroenteritis-cost-belgian-economy-hundreds-millions-euros-every-year}
+  \item[{[6]}] \textit{New! Belgian Health Status Report available online.} Sciensano news, 22 February 2019. \url{https://www.sciensano.be/en/press-corner/new-belgian-health-status-report-available-online}
+  \item[{[5]}] \textit{Belgium drops from 8th to 15th place on the European ladder of healthy life years.} Sciensano news, 16 July 2018. \url{https://www.sciensano.be/en/press-corner/belgium-drops-8th-15th-place-european-ladder-healthy-life-years}
+  \item[{[4]}] \textit{One in 10 globally suffer from foodborne diseases, WHO study finds.} EPI News, 3 December 2015. \url{http://news.ufl.edu/articles/2015/12/one-in-10-globally-suffer-from-foodborne-diseases-who-study-finds.php}
+  \item[{[3]}] \textit{Des nombres pour des aliments s\^{u}rs.} La Libre Belgique, 12 April 2015.
+  \item[{[2]}] \textit{Comment les nombres rendent vos aliments plus s\^{u}rs.} Le Soir, 8 April 2015.
+  \item[{[1]}] \textit{Hoe getallen je voedsel veiliger maken.} De Morgen, 7 April 2015. \url{https://www.demorgen.be/opinie/hoe-getallen-je-voedsel-veiliger-maken-b7910eb9/}
+\end{itemize}
+
+\section{Scientific honors and awards}
+\begin{itemize}
+  \setlength\itemsep{-0.1em}
+  \item \textbf{Odile Bain Memorial Prize}, Parasites \& Vectors; 2018
+  \item \textbf{PhD Scholarship}, Special Research Fund (BOF), Ghent University; 2010
+  \item \textbf{Pfizer Award} for the best Master thesis in Veterinary Medicine; 2010
+  \item \textbf{Dr Paul Janssen Award} for the best Master student in Veterinary Medicine; 2010
+  \item \textbf{Floribert Jurion Fund}, Royal Academy for Overseas Sciences; 2009
+  \item \textbf{Travel grant}, BIOS, Ghent University; 2008
+  \item \textbf{Travel grant}, Flemish Inter-University Council---University Development Cooperation (VLIR-UOS); 2007
+\end{itemize}
+
+%%
+%%
+
+\vspace{0.75in}
+\hrule
+\vspace{0.25in}
+
+\begingroup
+\parindent -3em
+\begin{picture}(100,100)
+\put(0,-20){\includegraphics{signature.pdf}}
+\put(45,20){\textsl{Brecht Devleesschauwer}}
+\put(38,0){
+\textsl{
+<<echo=FALSE, results='asis'>>=
+month <- month.name[as.numeric(format(Sys.Date(), "%m"))]
+cat(gsub("XXX", month, format(Sys.Date(), "%d XXX %Y")))
+@
+}}
+\end{picture}
+\endgroup
+
+\end{document} 
