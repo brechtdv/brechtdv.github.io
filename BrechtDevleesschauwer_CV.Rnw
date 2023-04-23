@@ -116,10 +116,12 @@ for (i in seq(nrow(db))) {
 \subsection{Contributions to peer review}
 \begin{itemize}
   \setlength\itemsep{0em}
+  \item \textbf{Co-Editor-in-Chief}, 2023--present\hfill \\
+    Archives of Public Health
   \item \textbf{Guest Editor}, 2019--present\hfill \\
     Archives of Public Health: burden of disease article collection
-  %\item \textbf{Academic Editor}, 2017--present\hfill \\
-  %  Food and Waterborne Parasitology
+  \item \textbf{Academic Editor}, 2017--present\hfill \\
+    Food and Waterborne Parasitology
   \item \textbf{Academic Editor}, 2017--2022\hfill \\
     PLOS ONE
   \item \textbf{Associate Editor}, 2017--2019\hfill \\
@@ -352,9 +354,29 @@ for Statisticians and Practitioners}, 28--29 March 2013 \hfill \\
     MSc Veterinary Medicine, Ghent University
 \end{itemize}
 
-\subsection{PhD students (6)}
+\subsection{PhD students (11)}
 \begin{itemize}
   \setlength\itemsep{0em}
+  \item \textbf{Lisa Van Acker}, 2023--2026 \hfill \\
+    PhD Veterinary Sciences, Ghent University \hfill \\
+    One Health implementation of improved patient management and disease control for \emph{Taenia solium} \hfill \\
+    Promoters: Sarah Gabriël, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Carlotta Di Bari}, 2023--2024 \hfill \\
+    PhD Veterinary Sciences, Ghent University \hfill \\
+    The global burden of neglected zoonotic diseases: assessing and strengthening the evidence base \hfill \\
+    Promoters: \textbf{Brecht Devleesschauwer}, Sarah Gabriël
+  \item \textbf{Yasmine Khan}, 2021--2025 \hfill \\
+    PhD Public Health, Ghent University \hfill \\
+    Unravelling the indirect health impact of the COVID-19 crisis in Belgium \hfill \\
+    Promoters: Delphine De Smedt, Nick Verhaeghe, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Lisa Cavillot}, 2021--2025 \hfill \\
+    PhD Public Health, Université catholique de Louvain \hfill \\
+    Unravelling the long-term health impact of the COVID-19 crisis in Belgium \hfill \\
+    Promoters: Niko Speybroeck, Koen Blot, \textbf{Brecht Devleesschauwer} 
+  \item \textbf{Jinane Ghattas}, 2020--2026 \hfill \\
+    PhD Public Health, Université catholique de Louvain \hfill \\
+    The social determinants of COVID-19: from evidence to policy \hfill \\
+    Promoters: Sophie Thunus, \textbf{Brecht Devleesschauwer} 
   \item \textbf{Martina Otavova}, 2020--2024 \hfill \\
     PhD Social Sciences (demography), Université catholique de Louvain \hfill \\
     Development and application of a Belgian Index of Multiple Deprivation \hfill \\

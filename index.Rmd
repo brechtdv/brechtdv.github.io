@@ -105,6 +105,9 @@ for (i in seq(nrow(db))) {
 
 ### Contributions to peer review
 
+* **Co-Editor-in-Chief**  
+    Archives of Public Health (2023--present)
+
 * **Guest Editor**  
     Archives of Public Health: [burden of disease article collection](https://www.biomedcentral.com/collections/burden-of-disease) (2019--present)
     
@@ -324,12 +327,17 @@ Nepali   | +        | +       | +
 * **Applied biomedical statistics**, 2013--2014   
     MSc Veterinary Medicine, Ghent University
 
-### PhD students (10)
+### PhD students (11)
 
-* **Caroline Shadouh**, 2021--2025   
-    PhD Public Health, Université catholique de Louvain  
-    Impacts of nitrogen deposition in the natural environment on pollen allergy outcomes in Belgium  
-    Promoters: Niko Speybroeck, **Brecht Devleesschauwer**  
+* **Lisa Van Acker**, 2023--2026   
+    PhD Veterinary Sciences, Ghent University  
+    One Health implementation of improved patient management and disease control for _Taenia solium_  
+    Promoters: Sarah Gabriël, **Brecht Devleesschauwer**
+
+* **Carlotta Di Bari**, 2023--2024   
+    PhD Veterinary Sciences, Ghent University  
+    The global burden of neglected zoonotic diseases: assessing and strengthening the evidence base  
+    Promoters: **Brecht Devleesschauwer**, Sarah Gabriël
 
 * **Yasmine Khan**, 2021--2025   
     PhD Public Health, Ghent University  
