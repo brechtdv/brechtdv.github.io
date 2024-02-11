@@ -37,7 +37,7 @@ Rue Juliette Wytsman 14, 1050 Brussels, Belgium $\mid$ +32 2 642 5035
 
 The common goal of my research activities is to quantify the true impact of diseases and health inequalities, and to make model-based evaluations of prevention and control. Currently, I am coordinating the Belgian national burden of disease study and chairing the COST Action CA18218 ``European Burden of Disease Network''.
 
-My research activities have led to over to 200 peer-reviewed scientific publications in national and international journals. My scientific expertise in burden assessment, risk assessment and health economics has been recognized through invitations to various national and international expert groups, including the Belgian Superior Health Council, the Belgian Food Safety Authority, and the World Health Organization.
+My research activities have led to over to 250 peer-reviewed scientific publications in national and international journals. My scientific expertise in burden assessment, risk assessment and health economics has been recognized through invitations to various national and international expert groups, including the Belgian Superior Health Council, the Belgian Food Safety Authority, and the World Health Organization.
 
 %% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Education}
@@ -81,7 +81,7 @@ My research activities have led to over to 200 peer-reviewed scientific publicat
 \section*{Mentoring and supervision}
 
 \noindent
-10 PhD students $\cdot$ 55 MSc students $\cdot$ 8 BSc students
+11 PhD students $\cdot$ 55 MSc students $\cdot$ 8 BSc students
 
 %% PUBLICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Scientific output}
