@@ -16,10 +16,11 @@ source("vitae-md.R")
 ```
 
 # Brecht Devleesschauwer
+<p class="text-muted">PhD DVM MVSc MStat</p>
 
-Senior epidemiologist & Head of Service Health information, PhD DVM MVSc MStat
+**Head of Service, Health information, Sciensano**
 
-_Sciensano, Department of Epidemiology and Public Health_  
+**Professor Epidemiology and Risk Analysis, Ghent University**
 
 brecht.devleesschauwer@sciensano.be  
 Rue Juliette Wytsman 14, 1050 Brussels, Belgium | +32 2 642 5035
@@ -34,8 +35,8 @@ Rue Juliette Wytsman 14, 1050 Brussels, Belgium | +32 2 642 5035
 
 * **Head of Service, Health information**, 01/2023--present  
     Sciensano, Brussels, Belgium
-    
-* **Visiting professor, risk analysis**, 04/2018--present  
+
+* **Visiting professor, epidemiology and risk analysis**, 04/2018--present  
     Ghent University, Merelbeke, Belgium
 
 * **Senior epidemiologist, coordinator national burden of disease studies**, 04/2016--present  
@@ -102,6 +103,14 @@ for (i in seq(nrow(db))) {
 ```
 
 ## Professional experiences
+
+### Professional leadership
+
+* **President**  
+    Belgian Association of Public Health---[www.baph.be](https://www.baph.be) (2023--present)
+
+* **Chair**  
+    European Burden of Disease Network---[www.burden-eu.net](https://www.burden-eu.net) (2019--present)
 
 ### Contributions to peer review
 
